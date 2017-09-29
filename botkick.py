@@ -95,7 +95,6 @@ def NOTIFIED_READ_MESSAGE(op):
         pass
 
 tracer.addOpInterrupt(55, NOTIFIED_READ_MESSAGE)
-
 def RECEIVE_MESSAGE(op):
     msg = op.message
     try:
@@ -126,11 +125,11 @@ def SEND_MESSAGE(op):
             if msg.contentType == 0:
                 #if "gname:" in msg.text:
 #--------------------------------------------------------------
-                if msg.text == "Mulai":
+                if msg.text == "B":
                     print "ok"
-                    _name = msg.text.replace("Mulai","")
+                    _name = msg.text.replace("B","")
                     gs = client.getGroup(msg.to)
-                    sendMessage(msg.to,"Halooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo")
+                    sendMessage(msg.to,"Isal nih isal")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -147,8 +146,8 @@ def SEND_MESSAGE(op):
                             except:
                                 sendText(msg.to,"error")
 #-------------------------------------------------------------
-                if msg.text == "Salken all":
-                    sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)
+                if msg.text == "Bb":
+                    sendMessage(msg.to, "B aja")
         else:
             pass
 
