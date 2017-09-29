@@ -130,7 +130,7 @@ def SEND_MESSAGE(op):
                     print "ok"
                     _name = msg.text.replace("B","")
                     gs = client.getGroup(msg.to)
-                    sendMessage(msg.to,"b")
+                    sendMessage(msg.to,"BB")
                     targets = []
                     for g in gs.members:
                         if _name in g.displayName:
@@ -148,7 +148,7 @@ def SEND_MESSAGE(op):
                                 sendText(msg.to,"error")
 #-------------------------------------------------------------
                 if msg.text == "P":
-                    sendMessage(msg.to,"ELER")
+                    sendMessage(msg.to, text="gift sent", contentMetadata=None, contentType=9)
         else:
             pass
 
